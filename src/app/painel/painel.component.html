@@ -1,0 +1,27 @@
+<div class="card min-h-full bg-base-200">
+  <div class="hero-content flex flex-col min-w-full items-stretch justify-around">
+    <div class="flex flex-row w-10 gap-x-36 w-full">
+      <app-progresso></app-progresso>
+      <app-tentativas></app-tentativas>
+    </div>
+
+    <div class="">
+      <div class="flex flex-row gap-y-36 min-w-full">
+        <div>
+          <h1>{{ instrucao }}</h1>
+          <p>{{ frases[0].fraseEng }}</p>
+
+          <textarea
+            class="textarea w-full"
+            placeholder="Answer"
+            (input)="atualizaResposta($event)"
+          ></textarea>
+
+          <div class="justify-end">
+            <button class="btn btn-primary">Verificar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
